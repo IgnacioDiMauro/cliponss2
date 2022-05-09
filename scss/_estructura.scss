@@ -1,0 +1,451 @@
+.contenedor {
+    display: grid;
+    margin: 0px;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "aside"
+    "main"
+    "footer";
+    background-image: url(../images/background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+header {
+    grid-area: header;
+    background-color: $colorprincipal;
+    background-image: url(../images/hyf.png);
+    display: flex;
+}
+.logo {
+    display: flex;
+    padding-left: 10px;
+    animation-name: movimiento-logo;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1.25s;
+    animation-delay: .2s;
+}
+@keyframes movimiento-logo {
+    0% {
+        margin-top: -100px;
+    }
+    100% {
+        margin-top: 0.5px;
+    }
+}
+.barras {
+    display: flex;
+    padding-top: 20px;
+    padding-left: 15px;
+}
+.barra {
+    display: flex;
+    width: 140px;
+}
+nav {
+    grid-area: nav;
+    display: flex;
+    background-color: $colorprincipal;
+    background-image: url(../images/hyf.png);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    
+}
+.nav {
+    li {
+    color: black;
+    padding-top: 20px;
+    font-size: small;
+    padding-left: 20px;
+    }
+    a {
+    color: black;
+    padding-top: 20px;
+    font-size: small;
+    padding-left: 20px;
+    }
+}
+.items {
+    display: flex;
+    grid-template-areas: 100px;
+    flex-direction: row;
+    list-style-type: none;
+    padding-left: 13px;
+    li {
+        text-decoration: none;
+        transition-property: all;
+        transition-timing-function: ease-in-out;
+        transition-delay: .1s;
+        font-size: 20px;
+    }
+    &:hover {
+        color: aliceblue;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+.subirclip {
+    padding-left: 20px;
+}
+.noti {
+    padding-left: 20px;
+}
+.micanal {
+    padding-left: 20px;
+}
+aside {
+    grid-area: aside;
+}
+.aside {
+    display: none;
+}
+.lmd {
+    display: flex;
+    justify-content: center;
+    padding-right: 35px;
+}
+.reciente {
+    display: none;
+}
+.historial {
+    display: none;
+}
+main {
+    grid-area: main;
+    display: flex;
+    text-align: center;
+}
+.classleft {
+    text-align: left;
+    display: flex;
+}
+.guardar {
+    display: flex;
+    
+}
+.safeclip  {
+    height: 25px;
+    margin-left: 90px;
+    margin-top: 15px;
+}
+footer {
+    grid-area: footer;
+    background-color: $colorprincipal;
+    background-image: url(../images/hyf.png);
+    display: grid;
+    margin-top: 170px;
+}
+.lista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &:hover {
+        color: aliceblue;
+    }
+    h3 {
+        text-decoration: none;
+        transition-property: all;
+        transition-timing-function: ease-in-out;
+        transition-delay: .1s;
+        margin: 0px;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+.iconos {
+    display: flex;
+    flex-direction: row;
+    padding-left: 65px;
+}
+.tt {
+    padding-left: 15px;
+}
+.info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    list-style-type: none;
+}
+.titulo {
+    display: flex;
+    justify-content: center;
+    padding-left: 35px;
+}
+.cuerpo {
+    ul {
+        display: flex;
+        list-style-type: none;
+        padding-left: 15px;
+        padding-bottom: 15px;
+    }
+    li {
+        display: flex;
+        list-style-type: none;
+        padding-left: 15px;
+        padding-bottom: 15px;
+    }
+    
+}
+.pad {
+    padding-left: 0%;
+}
+.titmic {
+    display: flex;
+    justify-content: center;
+}
+.desc {
+    margin-top: 50px;
+    font-size: 20px;
+}
+.listacontacto {
+    display: flex;
+    flex-direction: column;
+    padding-left: 70px;
+}
+
+
+@media screen and (min-width: 375px) {
+    .barra {
+        width: 200px;
+    }
+    nav {
+        padding-left: 30px;
+    }
+    .safeclip {
+        margin-left: 120px;
+    }
+    .info {
+        padding-left: 60px;
+    }
+    .titulo {
+        padding-left: 55px;
+    }
+    .listacontacto {
+        padding-left: 90px;
+    }
+    .nav {
+        li {
+            padding-left: 40px;
+            font-size: small;
+        }
+        a {
+            padding-left: 40px;
+            font-size: small;
+        }
+        
+    }
+    
+}
+@media screen and (min-width: 425px) {
+    .barra {
+        width: 250px;
+    }
+    nav {
+        padding-left: 60px;
+    }
+    .safeclip {
+        margin-left: 150px;
+    }
+    .info {
+        padding-left: 90px;
+    }
+    .titulo {
+        padding-left: 90px;
+    }
+    .listacontacto {
+        padding-left: 130px;
+    }
+    .nav {
+        li {
+            padding-left: 50px;
+        }
+        a  {
+            padding-left: 50px;
+        }
+        
+    }
+    
+}
+@media screen and (min-width: 768px) {
+    .logo {
+        margin-left: 5px;
+    }
+    .barra {
+        margin-left: 10px;
+        width: 250px;
+    }
+    nav {
+        padding-left: 0%;
+        padding-bottom: 38px;
+        position: relative;
+        top: 0;
+        z-index: 0;
+    }
+    .items {
+        padding-left: 0%;
+        padding-top: 23px;
+    }
+    
+    .noti {
+        padding-left: 15px;
+    }
+    .micanal {
+        padding-left: 15px;
+    }
+    .subirclip {
+        padding-left: 0px;
+    }
+    .contenedor {
+        grid-template-areas: 
+        "header nav"
+        "aside aside"
+        "main main"
+        "footer footer";
+    }
+    .safeclip  {
+        display: flex;
+        margin-left: 470px;
+    }
+    .video1 {
+        width: 600px;
+    }
+    .classleft {
+        margin-top: 0%;
+    }
+    footer {
+        justify-content: center;
+        height: min-content;
+        margin-top: 200px;
+    }
+    .iconos {
+        nav {
+            padding-bottom: 0%;
+        }
+    }
+    .iconos nav ul {
+        padding-left: 0%;
+    }
+    .lista {
+        justify-content: center;
+        flex-direction: row;
+    }
+    .lista h3 {
+        padding: 5px;
+    }
+    .iconos {
+        padding-left: 0%;
+        justify-content: center;
+    }
+    .info {
+        padding-left: 250px;
+    }
+    .titulo {
+        padding-left: 240px;
+    }
+    .titmic {
+        padding-left: 250px;
+    }
+    .desc {
+        margin-top: 200px;
+    }
+    .listacontacto {
+        padding-left: 300px;
+    }
+    .nav li a {
+        padding-left: 10px;
+    }
+    
+}
+@media screen and (min-width: 1024px) {
+    .barra {
+        width: 300px;
+    }
+    header {
+        justify-content: end;
+        padding-right: 50px;
+    }
+    .logo {
+        padding-right: 50px;
+    }
+    .safeclip {
+        margin-left: 600px;
+    }
+    .info {
+        padding-left: 380px;
+    }
+    .titulo {
+        padding-left: 370px;
+    }
+    .titmic {
+        padding-left: 300px;
+    }
+    .desc {
+        font-size: 30px;
+    }
+    .listacontacto {
+        padding-left: 400px;
+    }
+}
+@media screen and (min-width: 1440px) {
+    
+    header, nav, main {
+        font-size: 20px;
+    }
+    .logo {
+        padding-top: 10px;
+    }
+    header {
+        justify-content: center;
+        padding-top: 0%;
+        padding-right: 0%;
+        padding-left: 20px;
+    }
+    .barra {
+        padding: 5px;
+    }
+    nav {
+        justify-content: center;
+        padding-bottom: 0%;
+        height: 110px;
+        padding-left: 0%;
+    }
+    .items li {
+        padding-left: 50px;
+    }
+    main {
+        justify-content: center;
+    }
+    .video1 {
+        width: 1200px;
+    }
+    footer {
+        margin-top: 250px;
+    }
+    .info {
+        font-size: 30px;
+        padding-left: 0px;
+    }
+    .titulo {
+        padding-left: 0px;
+    }
+    .titmic {
+        font-size: 30px;
+        padding-left: 570px;
+    }
+    .desc {
+        font-size: 40px;
+    }
+    .listacontacto {
+        padding-left: 30px;
+    }
+    .nav li a {
+        font-size: large;
+    }
+} 

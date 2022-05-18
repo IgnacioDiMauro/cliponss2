@@ -173,11 +173,6 @@ footer {
     flex-direction: column;
     list-style-type: none;
 }
-.titulo {
-    display: flex;
-    justify-content: center;
-    padding-left: 35px;
-}
 .cuerpo {
     ul {
         display: flex;
@@ -209,6 +204,7 @@ footer {
     flex-direction: column;
     padding-left: 70px;
 }
+
 
 
 @media screen and (min-width: 375px) {
